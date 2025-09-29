@@ -59,6 +59,14 @@ img {
     margin-inline: auto;
 }
 
+/* ===== Background Particles (canvas sits behind) ===== */
+#particles {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(180deg, color-mix(in oklab, var(--bg) 90%, transparent), transparent);
+}
+
 /* ===== Progress Bar ===== */
 #progress {
     position: fixed;
@@ -178,11 +186,13 @@ img {
 .hi {
     margin: 0 0 .25rem;
     color: var(--muted);
+    text-transform: lowercase;
+    letter-spacing: .5px;
 }
 
 .gradient-text {
     margin: .15rem 0 .6rem;
-    font-size: clamp(2rem, 6vw + .6rem, 3.8rem);
+    font-size: clamp(2.2rem, 2.8vw + 1.2rem, 3.8rem);
     line-height: 1.05;
     letter-spacing: .2px;
     font-weight: 800;
@@ -201,7 +211,7 @@ img {
     }
 }
 
-/* width-locked typewriter */
+/* typewriter width lock */
 .typewrap {
     display: inline-grid;
     position: relative;
@@ -215,7 +225,7 @@ img {
     white-space: nowrap;
     font-family: "JetBrains Mono", monospace;
     font-weight: 600;
-    opacity: .85;
+    opacity: .9;
 }
 
 .type-ghost {
@@ -240,7 +250,7 @@ img {
     }
 }
 
-/* blobs */
+/* blobs (soft background) */
 .blobs {
     position: absolute;
     inset: 0;
@@ -497,23 +507,43 @@ section {
     color: var(--muted);
 }
 
-/* ===== Skills ===== */
-.skills {
-    display: flex;
-    gap: .6rem;
-    flex-wrap: wrap;
+/* ===== Services ===== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
-.skill {
-    padding: .6rem .8rem;
-    border-radius: 12px;
+@media (max-width: 1020px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.svc {
     border: 1px solid var(--border);
-    background: var(--bg-soft);
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 1.1rem;
+    box-shadow: var(--shadow);
+    transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease);
 }
 
-.skill i {
-    opacity: .8;
-    margin-right: .45rem;
+.svc:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    border-color: color-mix(in oklab, var(--brand) 35%, var(--border));
+}
+
+.svc i {
+    font-size: 1.3rem;
+    opacity: .9;
 }
 
 /* ===== Timeline ===== */

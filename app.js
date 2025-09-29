@@ -7,7 +7,7 @@ const navLinks = document.getElementById('menu');
 if (menuBtn && navLinks) {
     menuBtn.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('open');
-        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
     });
 }
 
@@ -58,9 +58,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 // Current year
-document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year')?.appendChild(document.createTextNode(new Date().getFullYear()));
 
-// Typewriter roles (longest is in .type-ghost to lock width)
+// Typewriter roles (longest equals .type-ghost content)
 const roles = [
     "Flutter • Kotlin • Java",
     "Android & Firebase",
@@ -87,8 +87,7 @@ function tick() {
             roleIndex = (roleIndex + 1) % roles.length;
         }
     }
-    const speed = deleting ? 35 : 55;
-    setTimeout(tick, speed);
+    setTimeout(tick, deleting ? 35 : 55);
 }
 if (el) tick();
 
@@ -119,3 +118,62 @@ const setProgress = () => {
 };
 window.addEventListener('scroll', setProgress);
 setProgress();
+
+// ----- Minimal Particles (canvas) -----
+const canvas = document.getElementById('particles');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let w, h, DPR, particles = [];
+
+    function resize() {
+        DPR = window.devicePixelRatio || 1;
+        w = canvas.width = Math.floor(innerWidth * DPR);
+        h = canvas.height = Math.floor(innerHeight * DPR);
+        canvas.style.width = innerWidth + 'px';
+        canvas.style.height = innerHeight + 'px';
+        initParticles();
+    }
+
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+
+    function initParticles() {
+        const count = Math.min(110, Math.floor(innerWidth / 10)); // responsive density
+        particles = Array.from({ length: count }).map(() => ({
+            x: rand(0, w), y: rand(0, h),
+            vx: rand(-0.05, 0.05) * DPR, vy: rand(-0.05, 0.05) * DPR,
+            r: rand(0.6, 1.6) * DPR,
+            hue: Math.random() < .5 ? 145 : 200 // greens & cyans
+        }));
+    }
+
+    function step() {
+        ctx.clearRect(0, 0, w, h);
+        // draw links
+        for (let i = 0; i < particles.length; i++) {
+            const a = particles[i];
+            for (let j = i + 1; j < particles.length; j++) {
+                const b = particles[j];
+                const dx = a.x - b.x, dy = a.y - b.y;
+                const dist2 = dx * dx + dy * dy;
+                if (dist2 < (110 * DPR) * (110 * DPR)) {
+                    const alpha = 0.08 * (1 - dist2 / ((110 * DPR) * (110 * DPR)));
+                    ctx.strokeStyle = `hsla(${(a.hue + b.hue) / 2}, 80%, 60%, ${alpha})`;
+                    ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+                }
+            }
+        }
+        // draw dots
+        for (const p of particles) {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > w) p.vx *= -1;
+            if (p.y < 0 || p.y > h) p.vy *= -1;
+            ctx.fillStyle = `hsla(${p.hue}, 80%, 60%, .9)`;
+            ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+        }
+        requestAnimationFrame(step);
+    }
+
+    resize();
+    requestAnimationFrame(step);
+    addEventListener('resize', resize);
+}

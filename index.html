@@ -8,14 +8,14 @@
 
     <!-- SEO -->
     <meta name="description"
-        content="Sahil Rathod — Flutter developer from Rajkot, Gujarat (India). Kotlin/Java (3+ yrs), Flutter (since 2024). Freelance & part-time at Jaitras Infosoft. Maintainer of Angel English Learning app." />
+        content="Sahil Rathod — Flutter developer from Rajkot, Gujarat. Kotlin/Java (3+ yrs), Flutter (since 2024). Freelance & part-time at Jaitras Infosoft. Maintains Angel English Learning app." />
     <meta name="author" content="Sahil Rathod" />
     <link rel="canonical" href="https://sahilstechs.github.io/portfolio/" />
 
-    <!-- Open Graph / Twitter -->
+    <!-- Social -->
     <meta property="og:title" content="Sahil Rathod — Flutter • Kotlin • Java" />
     <meta property="og:description"
-        content="Flutter developer from Rajkot, Gujarat. Kotlin/Java (3+ yrs), Flutter (since 2024). Maintainer of Angel English Learning app." />
+        content="Flutter developer from Rajkot, Gujarat (India). Kotlin/Java (3+ yrs), Flutter since 2024. Maintains Angel English Learning." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sahilstechs.github.io/portfolio/" />
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/00000000?v=4" />
@@ -28,20 +28,23 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@600&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 
 <body>
-    <!-- scroll progress -->
+    <!-- progress bar -->
     <div id="progress"></div>
 
+    <!-- particles canvas (background) -->
+    <canvas id="particles" aria-hidden="true"></canvas>
+
     <!-- NAV -->
-    <header class="nav" role="banner">
+    <header class="nav">
         <div class="container nav-inner">
             <a class="brand" href="#top" aria-label="Home">
                 <span class="logo">S</span><span>Sahil</span>
@@ -52,9 +55,11 @@
                         class="fa-solid fa-bars"></i></button>
                 <div id="menu" class="nav-links" role="menu">
                     <a href="#about" role="menuitem">About</a>
+                    <a href="#services" role="menuitem">Services</a>
                     <a href="#experience" role="menuitem">Experience</a>
                     <a href="#contact" role="menuitem">Contact</a>
-                    <a class="btn ghost" href="https://github.com/sahilstechs" target="_blank" rel="noopener">GitHub</a>
+                    <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.angel.english"
+                        target="_blank" rel="noopener">Angel English</a>
                 </div>
             </nav>
 
@@ -67,7 +72,7 @@
     <!-- HERO -->
     <main id="top">
         <section class="hero">
-            <!-- animated background blobs -->
+            <!-- subtle gradient blobs (under content) -->
             <div class="blobs" aria-hidden="true">
                 <span class="blob b1"></span>
                 <span class="blob b2"></span>
@@ -86,16 +91,16 @@
                     </p>
 
                     <p class="lead">
-                        Flutter developer from Rajkot, Gujarat (India). Kotlin &amp; Java for 3+ years, Flutter since
-                        2024.
-                        Currently freelancing and part-time at <strong>Jaitras Infosoft</strong>, maintaining the
-                        <strong>Angel English Learning</strong> app.
+                        Flutter developer from <strong>Rajkot, Gujarat, India</strong>. Kotlin &amp; Java for 3+ years,
+                        Flutter since 2024.
+                        Freelancing & part-time at <strong>Jaitras Infosoft</strong>. I maintain and improve the
+                        <strong>Angel English Learning</strong> app (rebuilt from Java → Flutter).
                     </p>
 
                     <div class="hero-cta">
                         <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.angel.english"
                             target="_blank" rel="noopener">
-                            <i class="fa-brands fa-google-play"></i> Angel English on Play Store
+                            <i class="fa-brands fa-google-play"></i> View App on Play Store
                         </a>
                         <a class="btn" href="mailto:sahilstechs@gmail.com"><i class="fa-solid fa-envelope"></i>
                             Email</a>
@@ -109,23 +114,22 @@
                     </div>
                 </div>
 
-                <aside class="hero-card parallax" aria-label="Profile" data-reveal>
+                <!-- quick profile card -->
+                <aside class="hero-card parallax" data-reveal aria-label="Quick profile">
                     <div class="avatar-wrap">
                         <!-- <img src="assets/avatar.png" alt="Sahil portrait" class="avatar"> -->
                         <div class="avatar-fallback">SR</div>
                     </div>
                     <ul class="quick">
                         <li><i class="fa-brands fa-flutter"></i> Flutter • Dart</li>
-                        <li><i class="fa-solid fa-layer-group"></i> Bloc • Clean Arch</li>
+                        <li><i class="fa-solid fa-layer-group"></i> Bloc • Clean Architecture</li>
                         <li><i class="fa-brands fa-android"></i> Android Studio • Play Console</li>
                         <li><i class="fa-brands fa-google"></i> Firebase • Google Ads</li>
                     </ul>
                 </aside>
             </div>
 
-            <div class="scroll-hint" aria-hidden="true">
-                <span class="wheel"></span>
-            </div>
+            <div class="scroll-hint" aria-hidden="true"><span class="wheel"></span></div>
         </section>
 
         <!-- ABOUT -->
@@ -133,12 +137,11 @@
             <div class="container">
                 <h2 class="section-title"><span class="dot"></span> About Me</h2>
                 <p class="muted" data-reveal>
-                    I’m a developer who loves building educational and utility apps with clean UI and rock-solid
-                    performance.
-                    I started with Kotlin/Java (3+ years), moved to Flutter in 2024, and I’m currently freelancing while
-                    working part-time at Jaitras Infosoft.
-                    I manage and continuously improve the <em>Angel English Learning</em> app, recently rebuilt from
-                    Java to Flutter from scratch.
+                    BCA graduate (Saurashtra University). 2 years at IANT (2018–2019). I’ve been building Android apps
+                    with Java/Kotlin for 3+ years
+                    and moved into Flutter in 2024 to ship faster across Android, iOS, and Web. I enjoy clean UI, smooth
+                    performance,
+                    and solving real problems—especially in education.
                 </p>
 
                 <div class="skills" data-reveal>
@@ -147,45 +150,72 @@
                     <span class="skill"><i class="fa-brands fa-java"></i> Java</span>
                     <span class="skill"><i class="fa-brands fa-android"></i> Kotlin</span>
                     <span class="skill"><i class="fa-solid fa-laptop-code"></i> Android Studio</span>
+                    <span class="skill"><i class="fa-brands fa-google"></i> Firebase</span>
                     <span class="skill"><i class="fa-brands fa-github"></i> GitHub</span>
                     <span class="skill"><i class="fa-brands fa-figma"></i> Figma</span>
-                    <span class="skill"><i class="fa-brands fa-google"></i> Firebase</span>
                     <span class="skill"><i class="fa-solid fa-bullhorn"></i> Google Ads</span>
                 </div>
             </div>
         </section>
 
-        <!-- EXPERIENCE -->
+        <!-- SERVICES (mimic cards like the reference) -->
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title"><span class="dot"></span> What I Do</h2>
+                <div class="services-grid">
+                    <article class="svc" data-reveal>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h3>Flutter Apps</h3>
+                        <p class="muted">Pixel-perfect mobile & web apps using Flutter with clean architecture and
+                            testing.</p>
+                    </article>
+                    <article class="svc" data-reveal>
+                        <i class="fa-solid fa-cloud"></i>
+                        <h3>Firebase Integration</h3>
+                        <p class="muted">Auth, Firestore, Cloud Messaging, Crashlytics, analytics, and CI/CD pipelines.
+                        </p>
+                    </article>
+                    <article class="svc" data-reveal>
+                        <i class="fa-solid fa-rotate"></i>
+                        <h3>Migrations & Rebuilds</h3>
+                        <p class="muted">Modernize legacy Java/Kotlin apps—like I did for Angel English—into Flutter.
+                        </p>
+                    </article>
+                    <article class="svc" data-reveal>
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h3>Monetization & Ads</h3>
+                        <p class="muted">Set up Google Ads/AdMob sensibly for revenue without hurting UX.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE (timeline) -->
         <section id="experience">
             <div class="container">
                 <h2 class="section-title"><span class="dot"></span> Experience & Education</h2>
-
                 <div class="timeline" data-reveal>
                     <div class="t-item">
                         <h4>Flutter Developer — Freelance / Part-time at Jaitras Infosoft</h4>
                         <div class="when">2024 — Present • Rajkot, Gujarat</div>
-                        <p class="muted">Flutter apps, feature work & maintenance on Angel English Learning; client
-                            projects and freelance engagements.</p>
+                        <p class="muted">Flutter apps, feature delivery & maintenance for Angel English; freelance
+                            client work.</p>
                     </div>
-
                     <div class="t-item">
                         <h4>Android Developer (Kotlin/Java)</h4>
                         <div class="when">2021 — 2024</div>
-                        <p class="muted">Built and iterated on multiple apps using Java & Kotlin. Hands-on with Play
-                            Store releases, analytics, and monetization.</p>
+                        <p class="muted">Built & iterated on Android apps, Play Store releases, analytics, and ads.</p>
                     </div>
-
                     <div class="t-item">
                         <h4>BCA — Saurashtra University</h4>
                         <div class="when">Graduated</div>
                         <p class="muted">Bachelor of Computer Applications.</p>
                     </div>
-
                     <div class="t-item">
-                        <h4>IANT (Hardware/Networking) — 2 years</h4>
+                        <h4>IANT — 2 years</h4>
                         <div class="when">2018 — 2019</div>
-                        <p class="muted">Foundations in IT infrastructure, helpful for debugging and deployment
-                            discipline.</p>
+                        <p class="muted">Hardware & networking fundamentals that help with debugging and deployments.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -195,12 +225,10 @@
         <section id="contact">
             <div class="container">
                 <h2 class="section-title"><span class="dot"></span> Contact</h2>
-
                 <div class="contact-card" data-reveal>
                     <div>
                         <p class="muted">
                             Open to freelance and full-time roles. Based in <strong>Rajkot, Gujarat, India</strong>.
-                            Let’s build something great together.
                         </p>
                         <p class="note">
                             <strong>Phone:</strong> <a href="tel:+919104411488">+91 91044 11488</a><br>
@@ -214,7 +242,7 @@
                             <a href="https://www.linkedin.com/in/sahil-rathod-96671728b" target="_blank" rel="noopener"
                                 aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                             <a href="https://twitter.com/SahilsTech" target="_blank" rel="noopener"
-                                aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
                             <a href="https://play.google.com/store/apps/details?id=com.angel.english" target="_blank"
                                 rel="noopener" aria-label="Play Store"><i class="fa-brands fa-google-play"></i></a>
                         </div>
@@ -245,17 +273,16 @@
     </main>
 
     <!-- FOOTER -->
-    <footer role="contentinfo">
+    <footer>
         <div class="container foot">
             <div class="links">
                 <a class="chip-link" href="#top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
             </div>
-            <div class="credit">© <span id="year"></span> Sahil Rathod. Built with ❤️ in Flutter spirit.</div>
+            <div class="credit">© <span id="year"></span> Sahil Rathod</div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="app.js?v=3" defer></script>
+    <script src="app.js?v=4" defer></script>
 </body>
 
 </html>
