@@ -184,7 +184,7 @@ img {
 
 .gradient-text {
     margin: .15rem 0 .6rem;
-    font-size: clamp(2.2rem, 2.8vw + 1.2rem, 3.8rem);
+    font-size: clamp(2rem, 6vw + .6rem, 3.8rem);
     line-height: 1.05;
     letter-spacing: .2px;
     font-weight: 800;
@@ -203,13 +203,50 @@ img {
     }
 }
 
-.type {
+/* width-locked typewriter line (prevents layout jump) */
+.typewrap {
+    display: inline-grid;
+    /* same box for both children */
+    position: relative;
+    margin: -.2rem 0 1.1rem;
+    min-height: 1.4em;
+    /* keeps line height stable */
+}
+
+.type,
+.type-ghost {
+    grid-area: 1 / 1;
+    white-space: nowrap;
+    /* avoid wrap jump */
     font-family: "JetBrains Mono", monospace;
     font-weight: 600;
     opacity: .85;
-    margin: -.2rem 0 1.1rem;
-    min-height: 1.4em;
 }
+
+/* reserves width, stays invisible */
+.type-ghost {
+    visibility: hidden;
+}
+
+/* optional caret that doesn't change width */
+.type::after {
+    content: "";
+    display: inline-block;
+    width: .6ch;
+    height: 1.1em;
+    margin-left: .1ch;
+    background: currentColor;
+    opacity: .7;
+    animation: blink 1s steps(1) infinite;
+    vertical-align: -0.1em;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
 
 /* blobs */
 .blobs {
@@ -430,6 +467,17 @@ img {
 @media (max-width: 980px) {
     .hero-inner {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mini-counters {
+        gap: .5rem;
     }
 }
 

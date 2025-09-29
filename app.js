@@ -89,8 +89,9 @@ function tick() {
 if (el) tick();
 
 // Parallax effect for the hero card
+// Parallax effect for the hero card (only on devices with fine pointer)
 const parallaxEl = document.querySelector('.parallax');
-if (parallaxEl) {
+if (parallaxEl && window.matchMedia('(pointer: fine)').matches) {
     const strength = 12;
     const onMove = (e) => {
         const rect = parallaxEl.getBoundingClientRect();
@@ -104,6 +105,7 @@ if (parallaxEl) {
     window.addEventListener('mousemove', onMove);
     window.addEventListener('mouseleave', reset);
 }
+
 
 // Scroll progress bar
 const progress = document.getElementById('progress');
