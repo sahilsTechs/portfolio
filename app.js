@@ -15,7 +15,6 @@ if (menuBtn && navLinks) {
 const themeToggle = document.getElementById('themeToggle');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 const saved = localStorage.getItem('theme');
-
 function applyTheme(mode) {
     document.documentElement.dataset.theme = mode;
     document.documentElement.style.colorScheme = (mode === 'light') ? 'light' : 'dark';
@@ -61,8 +60,13 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // Current year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Typewriter roles
-const roles = ["Flutter Developer", "Mobile & Web", "Clean Architecture", "Performance & DX"];
+// Typewriter roles (longest is in .type-ghost to lock width)
+const roles = [
+    "Flutter • Kotlin • Java",
+    "Android & Firebase",
+    "Clean Architecture",
+    "Angel English Learning"
+];
 const el = document.getElementById('typewriter');
 let roleIndex = 0, charIndex = 0, deleting = false;
 function tick() {
@@ -88,7 +92,6 @@ function tick() {
 }
 if (el) tick();
 
-// Parallax effect for the hero card
 // Parallax effect for the hero card (only on devices with fine pointer)
 const parallaxEl = document.querySelector('.parallax');
 if (parallaxEl && window.matchMedia('(pointer: fine)').matches) {
@@ -105,7 +108,6 @@ if (parallaxEl && window.matchMedia('(pointer: fine)').matches) {
     window.addEventListener('mousemove', onMove);
     window.addEventListener('mouseleave', reset);
 }
-
 
 // Scroll progress bar
 const progress = document.getElementById('progress');

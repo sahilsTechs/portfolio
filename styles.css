@@ -5,9 +5,7 @@
     --text: #e8eef2;
     --muted: #9aa7b2;
     --brand: #2ecc71;
-    /* primary */
     --brand-2: #19b9ff;
-    /* accent */
     --card: rgba(255, 255, 255, .06);
     --border: rgba(255, 255, 255, .12);
     --shadow: 0 10px 30px rgba(0, 0, 0, .25);
@@ -203,32 +201,27 @@ img {
     }
 }
 
-/* width-locked typewriter line (prevents layout jump) */
+/* width-locked typewriter */
 .typewrap {
     display: inline-grid;
-    /* same box for both children */
     position: relative;
     margin: -.2rem 0 1.1rem;
     min-height: 1.4em;
-    /* keeps line height stable */
 }
 
 .type,
 .type-ghost {
     grid-area: 1 / 1;
     white-space: nowrap;
-    /* avoid wrap jump */
     font-family: "JetBrains Mono", monospace;
     font-weight: 600;
     opacity: .85;
 }
 
-/* reserves width, stays invisible */
 .type-ghost {
     visibility: hidden;
 }
 
-/* optional caret that doesn't change width */
 .type::after {
     content: "";
     display: inline-block;
@@ -246,7 +239,6 @@ img {
         opacity: 0;
     }
 }
-
 
 /* blobs */
 .blobs {
@@ -376,7 +368,6 @@ img {
     padding: 1.2rem;
     box-shadow: var(--shadow);
     transform: translateZ(0);
-    /* enable GPU */
 }
 
 .avatar-wrap {
