@@ -1,209 +1,226 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sahil — Flutter Developer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sahil — Flutter Developer</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Sahil is a Flutter developer building performant mobile & web apps with delightful UX." />
-  <meta name="author" content="Sahil" />
-  <link rel="canonical" href="https://sahilstechs.github.io/portfolio/" />
+    <!-- SEO -->
+    <meta name="description"
+        content="Sahil is a Flutter developer building performant mobile & web apps with delightful UX." />
+    <meta name="author" content="Sahil" />
+    <link rel="canonical" href="https://sahilstechs.github.io/portfolio/" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Sahil — Flutter Developer" />
-  <meta property="og:description" content="Flutter developer crafting high-quality apps for mobile & web." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sahilstechs.github.io/portfolio/" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/00000000?v=4" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Sahil — Flutter Developer" />
+    <meta property="og:description" content="Flutter developer crafting high-quality apps for mobile & web." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sahilstechs.github.io/portfolio/" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/00000000?v=4" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%232ecc71"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="34" font-family="Arial" fill="white">S</text></svg>'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%232ecc71"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="34" font-family="Arial" fill="white">S</text></svg>'>
 
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css?v=1" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css?v=1" />
 </head>
+
 <body>
-  <!-- scroll progress -->
-  <div id="progress"></div>
+    <!-- scroll progress -->
+    <div id="progress"></div>
 
-  <!-- NAV -->
-  <header class="nav" role="banner">
-    <div class="container nav-inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="logo">S</span><span>Sahil</span>
-      </a>
-
-      <nav aria-label="Primary">
-        <button class="menu-btn" aria-expanded="false" aria-controls="menu"><i class="fa-solid fa-bars"></i></button>
-        <div id="menu" class="nav-links" role="menu">
-          <a href="#about" role="menuitem">About</a>
-          <a href="#experience" role="menuitem">Experience</a>
-          <a href="#contact" role="menuitem">Contact</a>
-          <a class="btn ghost" href="https://github.com/sahilstechs" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </nav>
-
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <i class="fa-solid fa-moon"></i>
-      </button>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <main id="top">
-    <section class="hero">
-      <!-- animated background blobs -->
-      <div class="blobs" aria-hidden="true">
-        <span class="blob b1"></span>
-        <span class="blob b2"></span>
-        <span class="blob b3"></span>
-      </div>
-
-      <div class="container hero-inner">
-        <div data-reveal>
-          <p class="hi">hey there, i'm</p>
-          <h1 class="gradient-text">Sahil Rathod</h1>
-          <p class="type" id="typewriter" aria-label="roles"></p>
-
-          <p class="lead">
-            I build fast, beautiful mobile & web apps with Flutter.
-            I care about performance, accessibility, and clean architecture.
-          </p>
-
-          <div class="hero-cta">
-            <a class="btn primary" href="#contact"><i class="fa-solid fa-comment-dots"></i> Work with me</a>
-            <a class="btn" href="mailto:sahilstechs@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-            <a class="btn ghost" href="https://drive.google.com/your-cv-link" target="_blank" rel="noopener">
-              <i class="fa-solid fa-file-lines"></i> Résumé
+    <!-- NAV -->
+    <header class="nav" role="banner">
+        <div class="container nav-inner">
+            <a class="brand" href="#top" aria-label="Home">
+                <span class="logo">S</span><span>Sahil</span>
             </a>
-          </div>
 
-          <div class="mini-counters">
-            <div class="pill"><strong>3+ yrs</strong><span>Flutter & Dart</span></div>
-            <div class="pill"><strong>Clean Arch</strong><span>Bloc • Riverpod</span></div>
-            <div class="pill"><strong>CI/CD</strong><span>Fastlane • Actions</span></div>
-          </div>
+            <nav aria-label="Primary">
+                <button class="menu-btn" aria-expanded="false" aria-controls="menu"><i
+                        class="fa-solid fa-bars"></i></button>
+                <div id="menu" class="nav-links" role="menu">
+                    <a href="#about" role="menuitem">About</a>
+                    <a href="#experience" role="menuitem">Experience</a>
+                    <a href="#contact" role="menuitem">Contact</a>
+                    <a class="btn ghost" href="https://github.com/sahilstechs" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </nav>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </div>
+    </header>
 
-        <aside class="hero-card parallax" aria-label="Profile" data-reveal>
-          <div class="avatar-wrap">
-            <!-- optional avatar image -->
-            <!-- <img src="assets/avatar.png" alt="Sahil portrait" class="avatar"> -->
-            <div class="avatar-fallback">SR</div>
-          </div>
-          <ul class="quick">
-            <li><i class="fa-brands fa-flutter"></i> Flutter • Dart</li>
-            <li><i class="fa-solid fa-layer-group"></i> Bloc • Riverpod</li>
-            <li><i class="fa-brands fa-android"></i> Android • iOS • Web</li>
-            <li><i class="fa-solid fa-rocket"></i> Perf & DX first</li>
-          </ul>
-        </aside>
-      </div>
-      <div class="scroll-hint" aria-hidden="true">
-        <span class="wheel"></span>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title"><span class="dot"></span> About Me</h2>
-        <p class="muted" data-reveal>
-          I build mobile apps with Flutter and love solving real-world problems. I focus on developer experience,
-          reliability, and a delightful UX. When I’m not coding, I’m reading new Flutter releases and polishing UI details.
-        </p>
-        <div class="skills" data-reveal>
-          <span class="skill"><i class="fa-brands fa-flutter"></i> Flutter</span>
-          <span class="skill"><i class="fa-brands fa-dart-lang"></i> Dart</span>
-          <span class="skill"><i class="fa-solid fa-layer-group"></i> Bloc / Riverpod</span>
-          <span class="skill"><i class="fa-solid fa-database"></i> SQLite / Hive</span>
-          <span class="skill"><i class="fa-brands fa-aws"></i> Firebase / AWS</span>
-          <span class="skill"><i class="fa-solid fa-vial"></i> Testing</span>
-          <span class="skill"><i class="fa-solid fa-rocket"></i> CI/CD</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-title"><span class="dot"></span> Experience</h2>
-        <div class="timeline" data-reveal>
-          <div class="t-item">
-            <h4>Flutter Developer — Freelance</h4>
-            <div class="when">2023 — Present</div>
-            <p class="muted">Helping startups ship MVPs and iterate quickly with Flutter, Firebase, and CI/CD.</p>
-          </div>
-          <div class="t-item">
-            <h4>Mobile Intern — Example Co.</h4>
-            <div class="when">2022 — 2023</div>
-            <p class="muted">Built features, wrote tests, and improved performance across Android/iOS.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title"><span class="dot"></span> Contact</h2>
-        <div class="contact-card" data-reveal>
-          <div>
-            <p class="muted">Have an idea or need help with a Flutter app? I’m open to freelance and full-time opportunities.</p>
-            <p class="note">Prefer email? <a href="mailto:sahilstechs@gmail.com">sahilstechs@gmail.com</a></p>
-            <div class="social" style="margin-top:.6rem">
-              <a href="https://github.com/sahilstechs" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/sahil-rathod-96671728b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://twitter.com/SahilsTech" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+    <!-- HERO -->
+    <main id="top">
+        <section class="hero">
+            <!-- animated background blobs -->
+            <div class="blobs" aria-hidden="true">
+                <span class="blob b1"></span>
+                <span class="blob b2"></span>
+                <span class="blob b3"></span>
             </div>
-          </div>
 
-          <!-- Simple static form (Formspree-ready) -->
-          <form action="https://formspree.io/f/your-id" method="POST">
-            <div class="row">
-              <label>
-                <span class="muted">Your name</span>
-                <input type="text" name="name" placeholder="Jane Doe" required />
-              </label>
-              <label>
-                <span class="muted">Email</span>
-                <input type="email" name="_replyto" placeholder="jane@email.com" required />
-              </label>
+            <div class="container hero-inner">
+                <div data-reveal>
+                    <p class="hi">hey there, i'm</p>
+                    <h1 class="gradient-text">Sahil Rathod</h1>
+                    <p class="type" id="typewriter" aria-label="roles"></p>
+
+                    <p class="lead">
+                        I build fast, beautiful mobile & web apps with Flutter.
+                        I care about performance, accessibility, and clean architecture.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a class="btn primary" href="#contact"><i class="fa-solid fa-comment-dots"></i> Work with me</a>
+                        <a class="btn" href="mailto:sahilstechs@gmail.com"><i class="fa-solid fa-envelope"></i>
+                            Email</a>
+                        <a class="btn ghost" href="https://drive.google.com/your-cv-link" target="_blank"
+                            rel="noopener">
+                            <i class="fa-solid fa-file-lines"></i> Résumé
+                        </a>
+                    </div>
+
+                    <div class="mini-counters">
+                        <div class="pill"><strong>3+ yrs</strong><span>Flutter & Dart</span></div>
+                        <div class="pill"><strong>Clean Arch</strong><span>Bloc • Riverpod</span></div>
+                        <div class="pill"><strong>CI/CD</strong><span>Fastlane • Actions</span></div>
+                    </div>
+                </div>
+
+                <aside class="hero-card parallax" aria-label="Profile" data-reveal>
+                    <div class="avatar-wrap">
+                        <!-- optional avatar image -->
+                        <!-- <img src="assets/avatar.png" alt="Sahil portrait" class="avatar"> -->
+                        <div class="avatar-fallback">SR</div>
+                    </div>
+                    <ul class="quick">
+                        <li><i class="fa-brands fa-flutter"></i> Flutter • Dart</li>
+                        <li><i class="fa-solid fa-layer-group"></i> Bloc • Riverpod</li>
+                        <li><i class="fa-brands fa-android"></i> Android • iOS • Web</li>
+                        <li><i class="fa-solid fa-rocket"></i> Perf & DX first</li>
+                    </ul>
+                </aside>
             </div>
-            <label style="display:block; margin:.7rem 0;">
-              <span class="muted">Message</span>
-              <textarea name="message" placeholder="Tell me about your project…" required></textarea>
-            </label>
-            <button class="btn primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
-            <input type="hidden" name="_subject" value="New message from portfolio" />
-          </form>
+            <div class="scroll-hint" aria-hidden="true">
+                <span class="wheel"></span>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title"><span class="dot"></span> About Me</h2>
+                <p class="muted" data-reveal>
+                    I build mobile apps with Flutter and love solving real-world problems. I focus on developer
+                    experience,
+                    reliability, and a delightful UX. When I’m not coding, I’m reading new Flutter releases and
+                    polishing UI details.
+                </p>
+                <div class="skills" data-reveal>
+                    <span class="skill"><i class="fa-brands fa-flutter"></i> Flutter</span>
+                    <span class="skill"><i class="fa-brands fa-dart-lang"></i> Dart</span>
+                    <span class="skill"><i class="fa-solid fa-layer-group"></i> Bloc / Riverpod</span>
+                    <span class="skill"><i class="fa-solid fa-database"></i> SQLite / Hive</span>
+                    <span class="skill"><i class="fa-brands fa-aws"></i> Firebase / AWS</span>
+                    <span class="skill"><i class="fa-solid fa-vial"></i> Testing</span>
+                    <span class="skill"><i class="fa-solid fa-rocket"></i> CI/CD</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <div class="container">
+                <h2 class="section-title"><span class="dot"></span> Experience</h2>
+                <div class="timeline" data-reveal>
+                    <div class="t-item">
+                        <h4>Flutter Developer — Freelance/Developer at jaitras-infosoft</h4>
+                        <div class="when">2024 — Present</div>
+                        <p class="muted">Helping startups ship MVPs and iterate quickly with Flutter, Firebase, and
+                            CI/CD.</p>
+                    </div>
+                    <div class="t-item">
+                        <h4>Mobile Intern — jaitras-infosoft</h4>
+                        <div class="when">2023 — 2024</div>
+                        <p class="muted">Built features, wrote tests, and improved performance across Android/iOS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title"><span class="dot"></span> Contact</h2>
+                <div class="contact-card" data-reveal>
+                    <div>
+                        <p class="muted">Have an idea or need help with a Flutter app? I’m open to freelance and
+                            full-time opportunities.</p>
+                        <p class="note">Prefer email? <a href="mailto:sahilstechs@gmail.com">sahilstechs@gmail.com</a>
+                        </p>
+                        <div class="social" style="margin-top:.6rem">
+                            <a href="https://github.com/sahilstechs" target="_blank" rel="noopener"
+                                aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sahil-rathod-96671728b" target="_blank" rel="noopener"
+                                aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://twitter.com/SahilsTech" target="_blank" rel="noopener"
+                                aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Simple static form (Formspree-ready) -->
+                    <form action="https://formspree.io/f/your-id" method="POST">
+                        <div class="row">
+                            <label>
+                                <span class="muted">Your name</span>
+                                <input type="text" name="name" placeholder="Jane Doe" required />
+                            </label>
+                            <label>
+                                <span class="muted">Email</span>
+                                <input type="email" name="_replyto" placeholder="jane@email.com" required />
+                            </label>
+                        </div>
+                        <label style="display:block; margin:.7rem 0;">
+                            <span class="muted">Message</span>
+                            <textarea name="message" placeholder="Tell me about your project…" required></textarea>
+                        </label>
+                        <button class="btn primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                        <input type="hidden" name="_subject" value="New message from portfolio" />
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="container foot">
+            <div class="links">
+                <a class="chip-link" href="#top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
+                <a class="chip-link" href="https://github.com/sahilstechs/portfolio" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Source
+                </a>
+            </div>
+            <div class="credit">© <span id="year"></span> Sahil. Built with ❤️ in Flutter spirit.</div>
         </div>
-      </div>
-    </section>
-  </main>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer role="contentinfo">
-    <div class="container foot">
-      <div class="links">
-        <a class="chip-link" href="#top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
-        <a class="chip-link" href="https://github.com/sahilstechs/portfolio" target="_blank" rel="noopener">
-          <i class="fa-brands fa-github"></i> Source
-        </a>
-      </div>
-      <div class="credit">© <span id="year"></span> Sahil. Built with ❤️ in Flutter spirit.</div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="app.js?v=1" defer></script>
+    <!-- Scripts -->
+    <script src="app.js?v=1" defer></script>
 </body>
+
 </html>
