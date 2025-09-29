@@ -18,9 +18,8 @@
         content="Flutter developer from Rajkot, Gujarat (India). Kotlin/Java (3+ yrs), Flutter since 2024. Maintains Angel English Learning." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sahilstechs.github.io/portfolio/" />
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/00000000?v=4" />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:image" content="https://sahilstechs.github.io/portfolio/assets/avatar.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://sahilstechs.github.io/portfolio/assets/avatar.png" />
 
     <!-- Favicon -->
@@ -35,7 +34,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css?v=4" />
+    <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 
 <body>
@@ -46,7 +45,7 @@
     <canvas id="particles" aria-hidden="true"></canvas>
 
     <!-- NAV -->
-    <header class="nav">
+    <header class="nav" role="banner">
         <div class="container nav-inner">
             <a class="brand" href="#top" aria-label="Home">
                 <span class="logo">S</span><span>Sahil</span>
@@ -74,7 +73,6 @@
     <!-- HERO -->
     <main id="top">
         <section class="hero">
-            <!-- subtle gradient blobs (under content) -->
             <div class="blobs" aria-hidden="true">
                 <span class="blob b1"></span>
                 <span class="blob b2"></span>
@@ -116,13 +114,15 @@
                     </div>
                 </div>
 
-                <!-- quick profile card -->
+                <!-- profile card with your image -->
                 <aside class="hero-card parallax" data-reveal aria-label="Quick profile">
                     <div class="avatar-wrap">
-                        <img src="assets/avatar.png" alt="Sahil Rathod" class="avatar" width="360" height="360"
-                            loading="eager" decoding="async">
+                        <picture>
+                            <source srcset="assets/avatar.webp" type="image/webp">
+                            <img src="assets/avatar.png" alt="Sahil Rathod" class="avatar" width="360" height="360"
+                                loading="eager" decoding="async" fetchpriority="high">
+                        </picture>
                     </div>
-
                     <ul class="quick">
                         <li><i class="fa-brands fa-flutter"></i> Flutter • Dart</li>
                         <li><i class="fa-solid fa-layer-group"></i> Bloc • Clean Architecture</li>
@@ -140,8 +140,8 @@
             <div class="container">
                 <h2 class="section-title"><span class="dot"></span> About Me</h2>
                 <p class="muted" data-reveal>
-                    BCA graduate (Saurashtra University). 2 years at IANT (2018–2019). I’ve been building Android apps
-                    with Java/Kotlin for 3+ years
+                    BCA (Saurashtra University). 2 years at IANT (2018–2019). I’ve been building Android apps with
+                    Java/Kotlin for 3+ years
                     and moved into Flutter in 2024 to ship faster across Android, iOS, and Web. I enjoy clean UI, smooth
                     performance,
                     and solving real problems—especially in education.
@@ -161,7 +161,7 @@
             </div>
         </section>
 
-        <!-- SERVICES (mimic cards like the reference) -->
+        <!-- SERVICES -->
         <section id="services">
             <div class="container">
                 <h2 class="section-title"><span class="dot"></span> What I Do</h2>
@@ -193,7 +193,7 @@
             </div>
         </section>
 
-        <!-- EXPERIENCE (timeline) -->
+        <!-- EXPERIENCE -->
         <section id="experience">
             <div class="container">
                 <h2 class="section-title"><span class="dot"></span> Experience & Education</h2>
@@ -276,7 +276,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer role="contentinfo">
         <div class="container foot">
             <div class="links">
                 <a class="chip-link" href="#top"><i class="fa-solid fa-arrow-up"></i> Back to top</a>
@@ -285,7 +285,7 @@
         </div>
     </footer>
 
-    <script src="app.js?v=4" defer></script>
+    <script src="app.js?v=6" defer></script>
 </body>
 
 </html>
